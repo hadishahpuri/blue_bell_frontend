@@ -3,9 +3,6 @@ import TextInput from '@/src/Components/Form/TextInput';
 import Link from 'next/link';
 
 export default function Login() {
-    async function loginApi() {
-        'use server';
-    }
     return (
         <>
             <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -16,7 +13,7 @@ export default function Login() {
                 </div>
 
                 <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form className="space-y-6" action={loginApi} method="POST">
+                    <form className="space-y-6">
                         <TextInput name="email" id="email" title="email" type="email"></TextInput>
                         <TextInput name="password" id="password" title="password" type="password"></TextInput>
                         <SubmitButton title="Sign in"></SubmitButton>
